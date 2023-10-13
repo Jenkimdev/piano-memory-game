@@ -8,6 +8,12 @@ body {
     align-items: center;
 }
 
+li {
+    font-size: 10px;
+    color: rgb(122, 151, 141);
+    text-align: center;
+}
+
 .welcome-message {
     text-align: center;
     font-size: 1.2rem;
