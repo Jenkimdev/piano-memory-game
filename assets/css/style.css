@@ -1,0 +1,19 @@
+/* General Styles */
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(113, 116, 119);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Piano Styles */
+
+.piano-outline {
+    margin-top: 50px;
+    border-radius: 15px;
+    width: 90%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+}
