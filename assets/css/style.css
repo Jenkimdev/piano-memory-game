@@ -11,9 +11,17 @@ body {
 /* Piano Styles */
 
 .piano-outline {
-    margin-top: 50px;
+    margin-top: 250px;
     border-radius: 15px;
-    width: 90%;
+    width: 500px;
     background-color: rgb(0, 0, 0);
     display: flex;
+}
+
+.keys {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 12rem;
+    list-style: none;
 }
