@@ -13,15 +13,25 @@ body {
 .piano-outline {
     margin-top: 250px;
     border-radius: 15px;
-    width: 500px;
+    width: 415px;
+    height: 209px;
     background-color: rgb(0, 0, 0);
     display: flex;
 }
 
 .keys {
-    display: flex;
-    justify-content: end;
+    position: absolute;
+    justify-content: flex-start;
     align-items: end;
+    display: flex;
     height: 12rem;
     list-style: none;
+}
+
+.white-key {
+    outline: solid black 1.5px;
+    height: 120px;
+    width: 3rem;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
 }
