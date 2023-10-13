@@ -35,10 +35,54 @@ h3 {
     list-style: none;
 }
 
+/* White Key Styles */
+
 .white-key {
     outline: solid black 1.5px;
     height: 120px;
     width: 3rem;
     background-color: white;
     border-radius: 0 0 5px 5px;
+}
+
+/* Black Key Styles */
+
+.black-key {
+    background: linear-gradient(to right, rgb(0, 0, 0),rgb(56, 55, 55));
+    outline: solid black 1.5px;
+    border-radius: 0 0 5px 5px;
+    width: 1.5rem;
+    height: 90px;
+    margin: 0 -12px;
+    position: absolute;
+}
+
+li:nth-of-type(2) {
+    position: absolute;
+    left: 88px;
+    top: 72px;
+}
+
+li:nth-of-type(4) {
+    position: absolute;
+    left: 136px;
+    top: 72px;
+}
+
+li:nth-of-type(7) {
+    position: absolute;
+    left: 231px;
+    top: 72px;
+}
+
+li:nth-of-type(9) {
+    position: absolute;
+    left: 279px;
+    top: 72px;
+}
+
+li:nth-of-type(11) {
+    position: absolute;
+    left: 327px;
+    top: 72px;
 }
