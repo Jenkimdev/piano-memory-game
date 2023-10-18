@@ -147,4 +147,17 @@ const playBKey = () => {
 BKey.addEventListener("click", playBKey);
 
 //Memory Game Section
+//Memory Game Skeleton Variables
+const keys = [CKey, DbKey, DKey, EbKey, EKey, FKey, GbKey, GKey, AbKey, AKey, BbKey, BKey];
+const score = document.getElementsByClassName("score-count");
 
+let computerSequence = [];
+let playerSequence = [];
+let correct;
+let win;
+
+
+//Play Game Funtion
+
+
+//Tests
