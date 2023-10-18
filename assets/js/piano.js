@@ -209,7 +209,7 @@ function level() {
     };
 };
 
-//Key Functions
+//Key Functions for Computer Turn
 function CFuntion() {
     playCKey();
     CKey.classList.add("active");
