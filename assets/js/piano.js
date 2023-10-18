@@ -45,3 +45,103 @@ const playDbKey = () => {
 };
 
 DbKey.addEventListener("click", playDbKey);
+
+//D Key
+const DKey = document.getElementById("D-key");
+const playDKey = () => {
+    playKey(pianoDKey);
+    DKey.classList.add("active");
+    setTimeout(() => DKey.classList.remove("active"), 200);
+};
+
+DKey.addEventListener("click", playDKey);
+
+//Eb Key
+const EbKey = document.getElementById("Eb-key");
+const playEbKey = () => {
+    playKey(pianoEbKey);
+    EbKey.classList.add("active");
+    setTimeout(() => EbKey.classList.remove("active"), 200);
+};
+
+EbKey.addEventListener("click", playEbKey);
+
+//E Key
+const EKey = document.getElementById("E-key");
+const playEKey = () => {
+    playKey(pianoEKey);
+    EKey.classList.add("active");
+    setTimeout(() => EKey.classList.remove("active"), 200);
+};
+
+EKey.addEventListener("click", playEKey);
+
+//F Key
+const FKey = document.getElementById("F-key");
+const playFKey = () => {
+    playKey(pianoFKey);
+    FKey.classList.add("active");
+    setTimeout(() => FKey.classList.remove("active"), 200);
+};
+
+FKey.addEventListener("click", playFKey);
+
+//Gb Key
+const GbKey = document.getElementById("Gb-key");
+const playGbKey = () => {
+    playKey(pianoGbKey);
+    GbKey.classList.add("active");
+    setTimeout(() => GbKey.classList.remove("active"), 200);
+};
+
+GbKey.addEventListener("click", playGbKey);
+
+//G Key
+const GKey = document.getElementById("G-key");
+const playGKey = () => {
+    playKey(pianoGKey);
+    GKey.classList.add("active");
+    setTimeout(() => GKey.classList.remove("active"), 200);
+};
+
+GKey.addEventListener("click", playGKey);
+
+//Ab Key
+const AbKey = document.getElementById("Ab-key");
+const playAbKey = () => {
+    playKey(pianoAbKey);
+    AbKey.classList.add("active");
+    setTimeout(() => AbKey.classList.remove("active"), 200);
+};
+
+AbKey.addEventListener("click", playAbKey);
+
+//A Key
+const AKey = document.getElementById("A-key");
+const playAKey = () => {
+    playKey(pianoAKey);
+    AKey.classList.add("active");
+    setTimeout(() => AKey.classList.remove("active"), 200);
+};
+
+AKey.addEventListener("click", playAKey);
+
+//Bb Key
+const BbKey = document.getElementById("Bb-key");
+const playBbKey = () => {
+    playKey(pianoBbKey);
+    BbKey.classList.add("active");
+    setTimeout(() => BbKey.classList.remove("active"), 200);
+};
+
+BbKey.addEventListener("click", playBbKey);
+
+//B Key
+const BKey = document.getElementById("B-key");
+const playBKey = () => {
+    playKey(pianoBKey);
+    BKey.classList.add("active");
+    setTimeout(() => BKey.classList.remove("active"), 200);
+};
+
+BKey.addEventListener("click", playBKey);
