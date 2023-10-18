@@ -34,4 +34,4 @@ const playCKey = () => {
     setTimeout(() => CKey.classList.remove("active"), 200);
 };
 
-CKey.addEventListener("click", PlayCKey);
+CKey.addEventListener("click", PlayCKey());
