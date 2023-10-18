@@ -166,7 +166,7 @@ function playGame() {
     score = 0;
     computerSequence = [];
     playerSequence = [];
-    correct = true;
+    correct = false;
     win = false;
     interval = 0;
     playerTurn = 0;
@@ -174,13 +174,13 @@ function playGame() {
     score.innerHTML = 0;
 
 
-    for (i = 1; i < 20; i++) {
+    for (var i = 0; i < 12; i++) {
         computerSequence.push(Math.floor(Math.random() * 12) + 1)
     };
 
     computerTurn = true;
 
-    interval = setInterval(level, 800);
+    interval = setInterval(level(), 800);
 };
 
 //Turn Function
@@ -190,20 +190,20 @@ function level() {
         computerTurn = false;
     }
 
-    if(compTurn) {
+    if(computerTurn) {
         setTimeout(() => {
-            if(Playersequence[numberKeyPressed] == 1) CFuntion();
-            if(Playersequence[numberKeyPressed] == 2) DbFuntion();
-            if(Playersequence[numberKeyPressed] == 3) DFuntion();
-            if(Playersequence[numberKeyPressed] == 4) EbFuntion();
-            if(Playersequence[numberKeyPressed] == 5) EFuntion();
-            if(Playersequence[numberKeyPressed] == 6) FFuntion();
-            if(Playersequence[numberKeyPressed] == 7) GbFuntion();
-            if(Playersequence[numberKeyPressed] == 8) GFuntion();
-            if(Playersequence[numberKeyPressed] == 9) AbFuntion();
-            if(Playersequence[numberKeyPressed] == 10) AFuntion();
-            if(Playersequence[numberKeyPressed] == 11) BbFuntion();
-            if(Playersequence[numberKeyPressed] == 12) BFuntion();
+            if(computerSequence[numberKeyPressed] == 1) CFuntion();
+            if(computerSequence[numberKeyPressed] == 2) DbFuntion();
+            if(computerSequence[numberKeyPressed] == 3) DFuntion();
+            if(computerSequence[numberKeyPressed] == 4) EbFuntion();
+            if(computerSequence[numberKeyPressed] == 5) EFuntion();
+            if(computerSequence[numberKeyPressed] == 6) FFuntion();
+            if(computerSequence[numberKeyPressed] == 7) GbFuntion();
+            if(computerSequence[numberKeyPressed] == 8) GFuntion();
+            if(computerSequence[numberKeyPressed] == 9) AbFuntion();
+            if(computerSequence[numberKeyPressed] == 10) AFuntion();
+            if(computerSequence[numberKeyPressed] == 11) BbFuntion();
+            if(computerSequence[numberKeyPressed] == 12) BFuntion();
             numberKeyPressed++;
         }, 200);
     };
@@ -211,73 +211,73 @@ function level() {
 
 //Key Functions
 function CFuntion() {
-    playCKey;
+    playCKey();
     CKey.classList.add("active");
     setTimeout(() => CKey.classList.remove("active"), 200);
 };
 
 function DbFuntion() {
-    playDbKey;
+    playDbKey();
     DbKey.classList.add("active");
     setTimeout(() => DbKey.classList.remove("active"), 200);
 };
 
 function DFuntion() {
-    playDKey;
+    playDKey();
     DKey.classList.add("active");
     setTimeout(() => DKey.classList.remove("active"), 200);
 };
 
 function EbFuntion() {
-    playEbKey;
+    playEbKey();
     EbKey.classList.add("active");
     setTimeout(() => EbKey.classList.remove("active"), 200);
 };
 
 function EFuntion() {
-    playEKey;
+    playEKey();
     EKey.classList.add("active");
     setTimeout(() => EKey.classList.remove("active"), 200);
 };
 
 function FFuntion() {
-    playFKey;
+    playFKey();
     FKey.classList.add("active");
     setTimeout(() => FKey.classList.remove("active"), 200);
 };
 
 function GbFuntion() {
-    playGbKey;
+    playGbKey();
     GbKey.classList.add("active");
     setTimeout(() => GbKey.classList.remove("active"), 200);
 };
 
 function GFuntion() {
-    playGKey;
+    playGKey();
     GKey.classList.add("active");
     setTimeout(() => GKey.classList.remove("active"), 200);
 };
 
 function AbFuntion() {
-    playAbKey;
+    playAbKey();
     AbKey.classList.add("active");
     setTimeout(() => AbKey.classList.remove("active"), 200);
 };
 
 function AFuntion() {
-    playAKey;
+    playAKey();
     AKey.classList.add("active");
     setTimeout(() => AKey.classList.remove("active"), 200);
 };
 
 function BbFuntion() {
-    playBbKey;
+    playBbKey();
     BbKey.classList.add("active");
     setTimeout(() => BbKey.classList.remove("active"), 200);
 };
 
 function BFuntion() {
-    playBKey;
+    playBKey();
     BKey.classList.add("active");
     setTimeout(() => BKey.classList.remove("active"), 200);
 };
