@@ -183,6 +183,13 @@ function playGame() {
     interval = setInterval(level(), 800);
 };
 
+//Start Button Function 
+const startButton = document.querySelector(".start-button");
+
+startButton.addEventListener("click", () => {
+    playGame();
+});
+
 //Turn Function
 function level() {
     if (computerSequence == playerSequence) {
@@ -281,13 +288,5 @@ function BFuntion() {
     BKey.classList.add("active");
     setTimeout(() => BKey.classList.remove("active"), 200);
 };
-
-
-//Start Button Function 
-const startButton = document.querySelector(".start-button");
-
-startButton.addEventListener("click", () => {
-    playGame();
-});
 
 //Tests
