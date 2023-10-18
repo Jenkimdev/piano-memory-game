@@ -158,6 +158,7 @@ let win;
 let interval;
 let playerTurn;
 let computerTurn;
+let numberKeyPressed;
 
 
 //Play Game Funtion
@@ -169,6 +170,7 @@ function playGame() {
     win = false;
     interval = 0;
     playerTurn = 0;
+    numberKeyPressed = 0;
     score.innerHTML = 0;
 
 
@@ -186,6 +188,24 @@ function level() {
     if (computerSequence == playerSequence) {
         clearInterval(interval);
         computerTurn = false;
+    }
+
+    if(compTurn) {
+        setTimeout(() => {
+            if(Playersequence[numberKeyPressed] == 1) CFuntion();
+            if(Playersequence[numberKeyPressed] == 2) DbFuntion();
+            if(Playersequence[numberKeyPressed] == 3) DFuntion();
+            if(Playersequence[numberKeyPressed] == 4) EbFuntion();
+            if(Playersequence[numberKeyPressed] == 5) EFuntion();
+            if(Playersequence[numberKeyPressed] == 6) FFuntion();
+            if(Playersequence[numberKeyPressed] == 7) GbFuntion();
+            if(Playersequence[numberKeyPressed] == 8) GFuntion();
+            if(Playersequence[numberKeyPressed] == 9) AbFuntion();
+            if(Playersequence[numberKeyPressed] == 10) AFuntion();
+            if(Playersequence[numberKeyPressed] == 11) BbFuntion();
+            if(Playersequence[numberKeyPressed] == 12) BFuntion();
+            numberKeyPressed++;
+        }, 200);
     }
 }
 
