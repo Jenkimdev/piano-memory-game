@@ -206,8 +206,70 @@ function level() {
             if(Playersequence[numberKeyPressed] == 12) BFuntion();
             numberKeyPressed++;
         }, 200);
-    }
-}
+    };
+};
+
+//Key Functions
+function CFuntion() {
+    playCKey;
+    CKey.classList.add("active");
+};
+
+function DbFuntion() {
+    playDbKey;
+    DbKey.classList.add("active");
+};
+
+function DFuntion() {
+    playDKey;
+    DKey.classList.add("active");
+};
+
+function EbFuntion() {
+    playEbKey;
+    EbKey.classList.add("active");
+};
+
+function EFuntion() {
+    playEKey;
+    EKey.classList.add("active");
+};
+
+function FFuntion() {
+    playFKey;
+    FKey.classList.add("active");
+};
+
+function GbFuntion() {
+    playGbKey;
+    GbKey.classList.add("active");
+};
+
+function GFuntion() {
+    playGKey;
+    GKey.classList.add("active");
+};
+
+function AbFuntion() {
+    playAbKey;
+    AbKey.classList.add("active");
+};
+
+function AFuntion() {
+    playAKey;
+    AKey.classList.add("active");
+};
+
+function BbFuntion() {
+    playBbKey;
+    BbKey.classList.add("active");
+};
+
+function BFuntion() {
+    playBKey;
+    BKey.classList.add("active");
+};
+
 
 //Start Button Function 
 const startButton = document.querySelector(".start-button");
