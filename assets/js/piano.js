@@ -29,9 +29,19 @@ const playKey = audio => {
 //C Key
 const CKey = document.getElementById("C-key");
 const playCKey = () => {
-    playSound(pianoCKey);
+    playKey(pianoCKey);
     CKey.classList.add("active");
     setTimeout(() => CKey.classList.remove("active"), 200);
 };
 
-CKey.addEventListener("click", PlayCKey());
+CKey.addEventListener("click", playCKey);
+
+//Db Key
+const DbKey = document.getElementById("Db-key");
+const playDbKey = () => {
+    playKey(pianoDbKey);
+    DbKey.classList.add("active");
+    setTimeout(() => DbKey.classList.remove("active"), 200);
+};
+
+DbKey.addEventListener("click", playDbKey);
