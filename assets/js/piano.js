@@ -149,15 +149,51 @@ BKey.addEventListener("click", playBKey);
 //Memory Game Section
 //Memory Game Skeleton Variables
 const keys = [CKey, DbKey, DKey, EbKey, EKey, FKey, GbKey, GKey, AbKey, AKey, BbKey, BKey];
-const score = document.getElementsByClassName("score-count");
 
+let score = document.getElementsByClassName("score-count");
 let computerSequence = [];
 let playerSequence = [];
 let correct;
 let win;
+let interval;
+let playerTurn;
+let computerTurn;
 
 
 //Play Game Funtion
+function playGame() {
+    score = 0;
+    computerSequence = [];
+    playerSequence = [];
+    correct = true;
+    win = false;
+    interval = 0;
+    playerTurn = 0;
+    score.innerHTML = 0;
 
+
+    for (i = 1; i < 20; i++) {
+        computerSequence.push(Math.floor(Math.random() * 12) + 1)
+    };
+
+    computerTurn = true;
+
+    interval = setInterval(level, 800);
+};
+
+//Turn Function
+function level() {
+    if (computerSequence == playerSequence) {
+        clearInterval(interval);
+        computerTurn = false;
+    }
+}
+
+//Start Button Function 
+const startButton = document.querySelector(".start-button");
+
+startButton.addEventListener("click", () => {
+    playGame();
+});
 
 //Tests
