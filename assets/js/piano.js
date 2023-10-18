@@ -289,4 +289,11 @@ function BFuntion() {
     setTimeout(() => BKey.classList.remove("active"), 200);
 };
 
+//Key Functions for Player Turn
+
+CKey.addEventListener("click", (even) => {
+    playerSequence.push(1);
+    check();
+    one();
+});
 //Tests
