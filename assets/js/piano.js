@@ -1,5 +1,5 @@
 let pianoOutline = document.getElementsByClassName("piano-outline");
-
+//Playable Piano Section
 //Audio Variables
 
 const pianoCKey = new Audio("/assets/js/sounds/C.mp3");
@@ -145,3 +145,5 @@ const playBKey = () => {
 };
 
 BKey.addEventListener("click", playBKey);
+
+//Memory Game Section
