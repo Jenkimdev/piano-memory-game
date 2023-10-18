@@ -213,61 +213,73 @@ function level() {
 function CFuntion() {
     playCKey;
     CKey.classList.add("active");
+    CKey.classList.remove("active"), 200);
 };
 
 function DbFuntion() {
     playDbKey;
     DbKey.classList.add("active");
+    DbKey.classList.remove("active"), 200);
 };
 
 function DFuntion() {
     playDKey;
     DKey.classList.add("active");
+    DKey.classList.remove("active"), 200);
 };
 
 function EbFuntion() {
     playEbKey;
     EbKey.classList.add("active");
+    EbKey.classList.remove("active"), 200);
 };
 
 function EFuntion() {
     playEKey;
     EKey.classList.add("active");
+    EKey.classList.remove("active"), 200);
 };
 
 function FFuntion() {
     playFKey;
     FKey.classList.add("active");
+    FKey.classList.remove("active"), 200);
 };
 
 function GbFuntion() {
     playGbKey;
     GbKey.classList.add("active");
+    GbKey.classList.remove("active"), 200);
 };
 
 function GFuntion() {
     playGKey;
     GKey.classList.add("active");
+    GKey.classList.remove("active"), 200);
 };
 
 function AbFuntion() {
     playAbKey;
     AbKey.classList.add("active");
+    AbKey.classList.remove("active"), 200);
 };
 
 function AFuntion() {
     playAKey;
     AKey.classList.add("active");
+    AKey.classList.remove("active"), 200);
 };
 
 function BbFuntion() {
     playBbKey;
     BbKey.classList.add("active");
+    BbKey.classList.remove("active"), 200);
 };
 
 function BFuntion() {
     playBKey;
     BKey.classList.add("active");
+    BKey.classList.remove("active"), 200);
 };
 
 
