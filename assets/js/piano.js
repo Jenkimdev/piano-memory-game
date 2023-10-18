@@ -25,3 +25,13 @@ const playKey = audio => {
     setTimeout(() => (keySound.volume = 0.8), 1600);
     setTimeout(() => (keySound.volume = 0.8), 2000);
 };
+
+//C Key
+const CKey = document.getElementById("C-key");
+const playCKey = () => {
+    playSound(pianoCKey);
+    CKey.classList.add("active");
+    setTimeout(() => CKey.classList.remove("active"), 200);
+};
+
+CKey.addEventListener("click", PlayCKey);
