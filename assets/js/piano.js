@@ -147,14 +147,4 @@ const playBKey = () => {
 BKey.addEventListener("click", playBKey);
 
 //Memory Game Section
-let order = [];
-let PlayerSequence = [];
-let turn;
-let good;
-let computerTurn;
-let interval;
-let win;
-
-const turnCounter = document.getElementsByClassName(score);
-const startButton = document.getElementsByClassName(start-button);
 
