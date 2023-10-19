@@ -366,15 +366,16 @@ BKey.addEventListener("click", (even) => {
 //Check Function
 
 function check() {
-    if (playerSequence[playerSequence.length - 1] != computerSequence[playerSequence.length -1])
-    correct = false;
+    if (playerSequence[playerSequence.length - 1] != computerSequence[playerSequence.length -1]) {
+        correct = false;
+    };
 
     if (playerSequence.length == 20 && correct) {
         winGame();
     };
 
     if (correct == false) {
-        alert("Sorry that was wrong :( Let's start again!");
+        //alert("Sorry that was wrong :( Let's start again!");
         setTimeout(() => {
             score.innerHTML = playerTurn;
         }, 900);
@@ -395,6 +396,6 @@ function check() {
 // Win Function
 
 function winGame() {
-    alert("Well done! You've completed the game :)");
+    //alert("Well done! You've completed the game :)");
     win = true;
 };
