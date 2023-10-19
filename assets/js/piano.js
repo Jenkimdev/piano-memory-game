@@ -173,7 +173,6 @@ function playGame() {
     numberKeyPressed = 0;
     score.innerHTML = 0;
 
-
     for (var i = 0; i < 12; i++) {
         computerSequence.push(Math.floor(Math.random() * 12) + 1)
     };
@@ -364,4 +363,38 @@ BKey.addEventListener("click", (even) => {
 });
 
 
-//Tests
+//Check Function
+
+function check() {
+    if (playerSequence[playerSequence.length - 1] != computerSequence[playerSequence.length -1])
+    correct = false;
+
+    if (playerSequence.length == 20 && good) {
+        winGame();
+    };
+
+    if (good == false) {
+        score.innerHTML = "Wrong!"
+        setTimeout(() => {
+            score.innerHTML = playerTurn;
+        }, 900);
+        play();
+    };
+
+    if (playerTurn == playerSequence.length && good && !win) {
+        playerTurn++;
+        playerSequence = [];
+        compTurn = true;
+        computerSequence = 0;
+        score.innerHTML = turn;
+        interval = setInterval(gameTurn, 800);
+    };
+
+};
+
+// Win Function
+
+function winGame() {
+    score.innerHTML = "Well Done!";
+    win = true;
+};
