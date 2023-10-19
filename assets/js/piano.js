@@ -296,4 +296,72 @@ CKey.addEventListener("click", (even) => {
     check();
     one();
 });
+
+DbKey.addEventListener("click", (even) => {
+    playerSequence.push(2);
+    check();
+    one();
+});
+
+DKey.addEventListener("click", (even) => {
+    playerSequence.push(3);
+    check();
+    one();
+});
+
+EbKey.addEventListener("click", (even) => {
+    playerSequence.push(4);
+    check();
+    one();
+});
+
+EKey.addEventListener("click", (even) => {
+    playerSequence.push(5);
+    check();
+    one();
+});
+
+FKey.addEventListener("click", (even) => {
+    playerSequence.push(6);
+    check();
+    one();
+});
+
+GbKey.addEventListener("click", (even) => {
+    playerSequence.push(7);
+    check();
+    one();
+});
+
+GKey.addEventListener("click", (even) => {
+    playerSequence.push(8);
+    check();
+    one();
+});
+
+AbKey.addEventListener("click", (even) => {
+    playerSequence.push(9);
+    check();
+    one();
+});
+
+AKey.addEventListener("click", (even) => {
+    playerSequence.push(10);
+    check();
+    one();
+});
+
+BbKey.addEventListener("click", (even) => {
+    playerSequence.push(11);
+    check();
+    one();
+});
+
+BKey.addEventListener("click", (even) => {
+    playerSequence.push(12);
+    check();
+    one();
+});
+
+
 //Tests
