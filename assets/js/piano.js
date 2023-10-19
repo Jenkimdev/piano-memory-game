@@ -374,19 +374,19 @@ function check() {
     };
 
     if (correct == false) {
-        score.innerHTML = "Wrong!"
+        alert("Sorry that was wrong :( Let's start again!");
         setTimeout(() => {
             score.innerHTML = playerTurn;
         }, 900);
         playGame();
     };
-
+    
     if (playerTurn == playerSequence.length && correct && !win) {
         playerTurn++;
         playerSequence = [];
         compTurn = true;
         computerSequence = 0;
-        score.innerHTML = turn;
+        score.innerHTML = playerTurn;
         interval = setInterval(gameTurn, 800);
     };
 
@@ -395,6 +395,6 @@ function check() {
 // Win Function
 
 function winGame() {
-    score.innerHTML = "Well Done!";
+    alert("Well done! You've completed the game :)");
     win = true;
 };
