@@ -369,19 +369,19 @@ function check() {
     if (playerSequence[playerSequence.length - 1] != computerSequence[playerSequence.length -1])
     correct = false;
 
-    if (playerSequence.length == 20 && good) {
+    if (playerSequence.length == 20 && correct) {
         winGame();
     };
 
-    if (good == false) {
+    if (correct == false) {
         score.innerHTML = "Wrong!"
         setTimeout(() => {
             score.innerHTML = playerTurn;
         }, 900);
-        play();
+        playGame();
     };
 
-    if (playerTurn == playerSequence.length && good && !win) {
+    if (playerTurn == playerSequence.length && correct && !win) {
         playerTurn++;
         playerSequence = [];
         compTurn = true;
