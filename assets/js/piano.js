@@ -436,7 +436,7 @@ function check() {
         compTurn = true;
         computerSequence = 0;
         score.innerHTML = playerTurn;
-        interval = setInterval(gameTurn, 800);
+        interval = setInterval(level, 800);
     };
 
 };
