@@ -48,6 +48,19 @@ header {
     margin: 10px;
 }
 
+/* Correct and Wrong messages styling */
+
+.congratulations-message {
+    color: darkgreen;
+    font-size: 1.5rem;
+}
+
+.wrong-message {
+    color: rgb(161, 33, 33);
+    font-size: 1.5rem;
+}
+
+
 /* Piano Styles */
 
 h3 {
