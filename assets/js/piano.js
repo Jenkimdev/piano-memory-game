@@ -155,12 +155,14 @@ let computerSequence = [];
 let playerSequence = [];
 let correct;
 let win;
+let flash;
 let interval;
-let playerTurn;
+let turn;
 let computerTurn;
 let numberKeyPressed;
 let correctMessage = document.getElementsByClassName("congratulations-message");
 let incorrectMessage = document.getElementsByClassName("wrong-message");
+let level;
 
 
 //Play Game Funtion
@@ -187,11 +189,13 @@ function playGame() {
 //Start Button Function 
 const startButton = document.querySelector(".start-button");
 
-startButton.addEventListener("click", () => {
+startButton.addEventListener("click", (event) => {
+    if (win) {
     playGame();
+    };
 });
 
-//Turn Function
+//Level Function
 function level() {
     if (computerSequence == playerSequence) {
         clearInterval(interval);
@@ -199,24 +203,7 @@ function level() {
     }
 
     if(computerTurn) {
-        /*
-        setTimeout(() => {
-            if(computerSequence[numberKeyPressed] == 1) soundC();
-            if(computerSequence[numberKeyPressed] == 2) soundDb();
-            if(computerSequence[numberKeyPressed] == 3) soundD();
-            if(computerSequence[numberKeyPressed] == 4) soundEb();
-            if(computerSequence[numberKeyPressed] == 5) soundE();
-            if(computerSequence[numberKeyPressed] == 6) soundF();
-            if(computerSequence[numberKeyPressed] == 7) soundGb();
-            if(computerSequence[numberKeyPressed] == 8) soundG();
-            if(computerSequence[numberKeyPressed] == 9) soundAb();
-            if(computerSequence[numberKeyPressed] == 10) soundA();
-            if(computerSequence[numberKeyPressed] == 11) soundBb();
-            if(computerSequence[numberKeyPressed] == 12) soundB();
-            numberKeyPressed++;
-        }, 200);
-        */
-       
+
         setTimeout(() => {
         switch (computerSequence[numberKeyPressed]) {
             case 1:
