@@ -198,91 +198,133 @@ function level() {
 
     if(computerTurn) {
         setTimeout(() => {
-            if(computerSequence[numberKeyPressed] == 1) CFuntion();
-            if(computerSequence[numberKeyPressed] == 2) DbFuntion();
-            if(computerSequence[numberKeyPressed] == 3) DFuntion();
-            if(computerSequence[numberKeyPressed] == 4) EbFuntion();
-            if(computerSequence[numberKeyPressed] == 5) EFuntion();
-            if(computerSequence[numberKeyPressed] == 6) FFuntion();
-            if(computerSequence[numberKeyPressed] == 7) GbFuntion();
-            if(computerSequence[numberKeyPressed] == 8) GFuntion();
-            if(computerSequence[numberKeyPressed] == 9) AbFuntion();
-            if(computerSequence[numberKeyPressed] == 10) AFuntion();
-            if(computerSequence[numberKeyPressed] == 11) BbFuntion();
-            if(computerSequence[numberKeyPressed] == 12) BFuntion();
+            if(computerSequence[numberKeyPressed] == 1) soundC();
+            if(computerSequence[numberKeyPressed] == 2) soundDb();
+            if(computerSequence[numberKeyPressed] == 3) soundD();
+            if(computerSequence[numberKeyPressed] == 4) soundEb();
+            if(computerSequence[numberKeyPressed] == 5) soundE();
+            if(computerSequence[numberKeyPressed] == 6) soundF();
+            if(computerSequence[numberKeyPressed] == 7) soundGb();
+            if(computerSequence[numberKeyPressed] == 8) soundG();
+            if(computerSequence[numberKeyPressed] == 9) soundAb();
+            if(computerSequence[numberKeyPressed] == 10) soundA();
+            if(computerSequence[numberKeyPressed] == 11) soundBb();
+            if(computerSequence[numberKeyPressed] == 12) soundB();
             numberKeyPressed++;
         }, 200);
+       
+        /*
+        switch (computerSequence[numberKeyPressed], i) {
+            case computerSequence[numberKeyPressed] == 1:
+            soundC();
+            break;
+            case computerSequence[numberKeyPressed] == 2:
+            soundDb();
+            break;
+            case computerSequence[numberKeyPressed] == 3:
+            soundD();
+            break;
+            case computerSequence[numberKeyPressed] == 4:
+            soundEb();
+            break;
+            case computerSequence[numberKeyPressed] == 5:
+            soundE();
+            break;
+            case computerSequence[numberKeyPressed] == 6:
+            soundF();
+            break;
+            case computerSequence[numberKeyPressed] == 7:
+            soundGb();
+            break;
+            case computerSequence[numberKeyPressed] == 8:
+            soundG();
+            break;
+            case computerSequence[numberKeyPressed] == 9:
+            soundAb();
+            break;
+            case computerSequence[numberKeyPressed] == 10:
+            soundA();
+            break;
+            case computerSequence[numberKeyPressed] == 11:
+            soundBb();
+            break;
+            case computerSequence[numberKeyPressed] == 12:
+            sound();
+        };
+        */
+
     };
+    
 };
 
 //Key Functions for Computer Turn
-function CFuntion() {
+function soundC() {
     playCKey();
     CKey.classList.add("active");
     setTimeout(() => CKey.classList.remove("active"), 200);
 };
 
-function DbFuntion() {
+function soundDb() {
     playDbKey();
     DbKey.classList.add("active");
     setTimeout(() => DbKey.classList.remove("active"), 200);
 };
 
-function DFuntion() {
+function soundD() {
     playDKey();
     DKey.classList.add("active");
     setTimeout(() => DKey.classList.remove("active"), 200);
 };
 
-function EbFuntion() {
+function soundEb() {
     playEbKey();
     EbKey.classList.add("active");
     setTimeout(() => EbKey.classList.remove("active"), 200);
 };
 
-function EFuntion() {
+function soundE() {
     playEKey();
     EKey.classList.add("active");
     setTimeout(() => EKey.classList.remove("active"), 200);
 };
 
-function FFuntion() {
+function soundF() {
     playFKey();
     FKey.classList.add("active");
     setTimeout(() => FKey.classList.remove("active"), 200);
 };
 
-function GbFuntion() {
+function soundGb() {
     playGbKey();
     GbKey.classList.add("active");
     setTimeout(() => GbKey.classList.remove("active"), 200);
 };
 
-function GFuntion() {
+function soundG() {
     playGKey();
     GKey.classList.add("active");
     setTimeout(() => GKey.classList.remove("active"), 200);
 };
 
-function AbFuntion() {
+function soundAb() {
     playAbKey();
     AbKey.classList.add("active");
     setTimeout(() => AbKey.classList.remove("active"), 200);
 };
 
-function AFuntion() {
+function soundA() {
     playAKey();
     AKey.classList.add("active");
     setTimeout(() => AKey.classList.remove("active"), 200);
 };
 
-function BbFuntion() {
+function soundBb() {
     playBbKey();
     BbKey.classList.add("active");
     setTimeout(() => BbKey.classList.remove("active"), 200);
 };
 
-function BFuntion() {
+function soundB() {
     playBKey();
     BKey.classList.add("active");
     setTimeout(() => BKey.classList.remove("active"), 200);
@@ -375,7 +417,7 @@ function check() {
     };
 
     if (correct == false) {
-        //alert("Sorry that was wrong :( Let's start again!");
+        alert("Sorry that was wrong :( Let's start again!");
         setTimeout(() => {
             score.innerHTML = playerTurn;
         }, 900);
@@ -396,6 +438,6 @@ function check() {
 // Win Function
 
 function winGame() {
-    //alert("Well done! You've completed the game :)");
+    alert("Well done! You've completed the game :)");
     win = true;
 };
