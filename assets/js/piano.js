@@ -199,7 +199,7 @@ function level() {
     }
 
     if(computerTurn) {
-        
+        /*
         setTimeout(() => {
             if(computerSequence[numberKeyPressed] == 1) soundC();
             if(computerSequence[numberKeyPressed] == 2) soundDb();
@@ -215,9 +215,9 @@ function level() {
             if(computerSequence[numberKeyPressed] == 12) soundB();
             numberKeyPressed++;
         }, 200);
-        
+        */
        
-        /*
+        setTimeout(() => {
         switch (computerSequence[numberKeyPressed]) {
             case 1:
             soundC();
@@ -252,10 +252,12 @@ function level() {
             case 11:
             soundBb();
             break;
-            case 12:
+            default:
             sound();
+            break;
         };
-        */
+        }, 200);
+        
         
 
     };
