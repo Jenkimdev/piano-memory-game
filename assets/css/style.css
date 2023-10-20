@@ -64,8 +64,12 @@ header {
 /* Piano Styles */
 
 h3 {
-    padding-left: 95px;
+    padding-left: 110px;
     color: white;
+}
+
+.power {
+    position: absolute;
 }
 
 .piano-outline {

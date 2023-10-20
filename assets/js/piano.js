@@ -149,11 +149,13 @@ BKey.addEventListener("click", playBKey);
 //Memory Game Section
 //Memory Game Skeleton Variables
 const keys = [CKey, DbKey, DKey, EbKey, EKey, FKey, GbKey, GKey, AbKey, AKey, BbKey, BKey];
+const onButton = document.querySelector(".power");
 
-let score = document.getElementsByClassName("score-count");
+let score = document.querySelector(".score-count");
 let computerSequence = [];
 let playerSequence = [];
 let correct;
+let on = false;
 let win;
 let intervalId;
 let turn;
@@ -161,6 +163,20 @@ let computerTurn;
 let numberKeyPressed;
 let correctMessage = document.getElementsByClassName("congratulations-message");
 let incorrectMessage = document.getElementsByClassName("wrong-message");
+
+
+//Power On Funtion
+onButton.addEventListener("click", (event) => {
+    if (onButton.checked == true) {
+        on = true;
+        score.innerHTML = "-";
+    }
+    else {
+        on = false;
+        score.innerHTML = "";
+        clearInterval(intervalId);
+    };
+});
 
 
 //Play Game Funtion
@@ -176,34 +192,36 @@ function playGame() {
     numberKeyPressed = 0;
     score.innerHTML = 0;
 
-    for (i = 0; i < 12; i++) {
+    for (var i = 0; i < 12; i++) {
         computerSequence.push(Math.floor(Math.random() * 12) + 1)
     };
 
     computerTurn = true;
 
-    interval = setInterval(level, 800);
+    intervalId = setInterval(level, 800);
 };
 
 //Start Button Function 
 const startButton = document.querySelector(".start-button");
 
 startButton.addEventListener("click", (event) => {
-    if (win) {
+    if (on || win) {
     playGame();
     };
 });
 
 //Level Function
 function level() {
+    on = false;
+
     if (numberKeyPressed == playerTurn) {
         clearInterval(intervalId);
         computerTurn = false;
-    }
+    };
 
     if(computerTurn) {
 
-        setTimeout(() => {
+        /*setTimeout(() => {
         switch (computerSequence[numberKeyPressed]) {
             case 1:
             soundC();
@@ -242,6 +260,23 @@ function level() {
             soundB();
             break;
         };
+        }, 200);
+        */
+
+        setTimeout(() => {
+            if (computerSequence[numberKeyPressed] == 1) soundC();
+            if (computerSequence[numberKeyPressed] == 2) soundDb();
+            if (computerSequence[numberKeyPressed] == 3) soundD();
+            if (computerSequence[numberKeyPressed] == 4) soundEb();
+            if (computerSequence[numberKeyPressed] == 5) soundE();
+            if (computerSequence[numberKeyPressed] == 6) soundF();
+            if (computerSequence[numberKeyPressed] == 7) soundGb();
+            if (computerSequence[numberKeyPressed] == 8) soundG();
+            if (computerSequence[numberKeyPressed] == 9) soundAb();
+            if (computerSequence[numberKeyPressed] == 10) soundA();
+            if (computerSequence[numberKeyPressed] == 11) soundBb();
+            if (computerSequence[numberKeyPressed] == 12) soundB();
+            numberKeyPressed++;
         }, 200);
         
         
@@ -325,96 +360,121 @@ function soundB() {
 
 //Key Functions for Player Turn
 
-CKey.addEventListener("click", (even) => {
-    playerSequence.push(1);
-    check();
-    soundC();
+CKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(1);
+        check();
+        soundC();
+    };
 });
 
-DbKey.addEventListener("click", (even) => {
-    playerSequence.push(2);
-    check();
-    soundDb();
+DbKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(2);
+        check();
+        soundDb();
+    };
 });
 
-DKey.addEventListener("click", (even) => {
-    playerSequence.push(3);
-    check();
-    soundD();
+DKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(3);
+        check();
+        soundD();
+    };
 });
 
-EbKey.addEventListener("click", (even) => {
-    playerSequence.push(4);
-    check();
-    soundEb();
+EbKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(4);
+        check();
+        soundEb();
+    };
 });
 
-EKey.addEventListener("click", (even) => {
-    playerSequence.push(5);
-    check();
-    soundE();
+EKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(5);
+        check();
+        soundE();
+    };
 });
 
-FKey.addEventListener("click", (even) => {
-    playerSequence.push(6);
-    check();
-    soundF();
+FKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(6);
+        check();
+        soundF();
+    };
 });
 
-GbKey.addEventListener("click", (even) => {
-    playerSequence.push(7);
-    check();
-    soundGb();
+GbKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(7);
+        check();
+        soundGb();
+    };
 });
 
-GKey.addEventListener("click", (even) => {
-    playerSequence.push(8);
-    check();
-    soundG();
+GKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(8);
+        check();
+        soundG();
+    };
 });
 
-AbKey.addEventListener("click", (even) => {
-    playerSequence.push(9);
-    check();
-    soundAb();
+AbKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(9);
+        check();
+        soundAb();
+    };
 });
 
-AKey.addEventListener("click", (even) => {
-    playerSequence.push(10);
-    check();
-    soundA();
+AKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(10);
+        check();
+        soundA();
+    };
 });
 
-BbKey.addEventListener("click", (even) => {
-    playerSequence.push(11);
-    check();
-    soundBb();
+BbKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(11);
+        check();
+        soundBb();
+    };
 });
 
-BKey.addEventListener("click", (even) => {
-    playerSequence.push(12);
-    check();
-    soundB();
+BKey.addEventListener("click", (event) => {
+    if(on) {
+        playerSequence.push(12);
+        check();
+        soundB();
+    };
 });
 
 
 //Check Function
 
 function check() {
-    if (playerSequence[playerSequence.length - 1] != computerSequence[playerSequence.length -1]) {
+    if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length -1]) {
         correct = false;
     };
 
-    if (playerSequence.length == 20 && correct) {
+    if (playerSequence.length == 12 && correct) {
         winGame();
     };
 
     if (correct == false) {
-        alert("Sorry that was wrong :( Let's start again!");
+        //alert("Sorry that was wrong :( Let's start again!");
         setTimeout(() => {
             score.innerHTML = playerTurn;
+            playGame();
         }, 900);
-        playGame();
+        
     };
     
     if (playerTurn == playerSequence.length && correct && !win) {
@@ -422,9 +482,10 @@ function check() {
         playerTurn++;
         playerSequence = [];
         compTurn = true;
-        computerSequence = 0;
+        computerSequence = [];
         score.innerHTML = playerTurn;
-        interval = setInterval(level, 800);
+        intervalId = setInterval(level, 800);
+        level();
     };
 
 };
