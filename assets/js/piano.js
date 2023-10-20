@@ -155,14 +155,12 @@ let computerSequence = [];
 let playerSequence = [];
 let correct;
 let win;
-let flash;
-let interval;
+let intervalId;
 let turn;
 let computerTurn;
 let numberKeyPressed;
 let correctMessage = document.getElementsByClassName("congratulations-message");
 let incorrectMessage = document.getElementsByClassName("wrong-message");
-let level;
 
 
 //Play Game Funtion
@@ -172,18 +170,19 @@ function playGame() {
     playerSequence = [];
     correct = true;
     win = false;
-    interval = 0;
-    playerTurn = 0;
     numberKeyPressed = 0;
-    score.innerHTML = 1;
+    intervalId = 0;
+    playerTurn = 1;
+    numberKeyPressed = 0;
+    score.innerHTML = 0;
 
-    for (var i = 0; i < 12; i++) {
+    for (i = 0; i < 12; i++) {
         computerSequence.push(Math.floor(Math.random() * 12) + 1)
     };
 
     computerTurn = true;
 
-    interval = setInterval(level(), 800);
+    interval = setInterval(level, 800);
 };
 
 //Start Button Function 
@@ -197,8 +196,8 @@ startButton.addEventListener("click", (event) => {
 
 //Level Function
 function level() {
-    if (computerSequence == playerSequence) {
-        clearInterval(interval);
+    if (numberKeyPressed == playerTurn) {
+        clearInterval(intervalId);
         computerTurn = false;
     }
 
@@ -240,7 +239,7 @@ function level() {
             soundBb();
             break;
             default:
-            sound();
+            soundB();
             break;
         };
         }, 200);
