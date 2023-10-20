@@ -159,6 +159,8 @@ let interval;
 let playerTurn;
 let computerTurn;
 let numberKeyPressed;
+let correctMessage = document.getElementsByClassName("congratulations-message");
+let incorrectMessage = document.getElementsByClassName("wrong-message");
 
 
 //Play Game Funtion
