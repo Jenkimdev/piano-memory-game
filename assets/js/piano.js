@@ -168,12 +168,12 @@ function playGame() {
     score = 0;
     computerSequence = [];
     playerSequence = [];
-    correct = false;
+    correct = true;
     win = false;
     interval = 0;
     playerTurn = 0;
     numberKeyPressed = 0;
-    score.innerHTML = 0;
+    score.innerHTML = 1;
 
     for (var i = 0; i < 12; i++) {
         computerSequence.push(Math.floor(Math.random() * 12) + 1)
@@ -199,6 +199,7 @@ function level() {
     }
 
     if(computerTurn) {
+        
         setTimeout(() => {
             if(computerSequence[numberKeyPressed] == 1) soundC();
             if(computerSequence[numberKeyPressed] == 2) soundDb();
@@ -214,46 +215,48 @@ function level() {
             if(computerSequence[numberKeyPressed] == 12) soundB();
             numberKeyPressed++;
         }, 200);
+        
        
         /*
-        switch (computerSequence[numberKeyPressed], i) {
-            case computerSequence[numberKeyPressed] == 1:
+        switch (computerSequence[numberKeyPressed]) {
+            case 1:
             soundC();
             break;
-            case computerSequence[numberKeyPressed] == 2:
+            case 2:
             soundDb();
             break;
-            case computerSequence[numberKeyPressed] == 3:
+            case 3:
             soundD();
             break;
-            case computerSequence[numberKeyPressed] == 4:
+            case 4:
             soundEb();
             break;
-            case computerSequence[numberKeyPressed] == 5:
+            case 5:
             soundE();
             break;
-            case computerSequence[numberKeyPressed] == 6:
+            case 6:
             soundF();
             break;
-            case computerSequence[numberKeyPressed] == 7:
+            case 7:
             soundGb();
             break;
-            case computerSequence[numberKeyPressed] == 8:
+            case 8:
             soundG();
             break;
-            case computerSequence[numberKeyPressed] == 9:
+            case 9:
             soundAb();
             break;
-            case computerSequence[numberKeyPressed] == 10:
+            case 10:
             soundA();
             break;
-            case computerSequence[numberKeyPressed] == 11:
+            case 11:
             soundBb();
             break;
-            case computerSequence[numberKeyPressed] == 12:
+            case 12:
             sound();
         };
         */
+        
 
     };
     
@@ -337,73 +340,73 @@ function soundB() {
 CKey.addEventListener("click", (even) => {
     playerSequence.push(1);
     check();
-    CFuntion();
+    soundC();
 });
 
 DbKey.addEventListener("click", (even) => {
     playerSequence.push(2);
     check();
-    DbFuntion();
+    soundDb();
 });
 
 DKey.addEventListener("click", (even) => {
     playerSequence.push(3);
     check();
-    DFuntion();
+    soundD();
 });
 
 EbKey.addEventListener("click", (even) => {
     playerSequence.push(4);
     check();
-    EbFuntion();
+    soundEb();
 });
 
 EKey.addEventListener("click", (even) => {
     playerSequence.push(5);
     check();
-    EFuntion();
+    soundE();
 });
 
 FKey.addEventListener("click", (even) => {
     playerSequence.push(6);
     check();
-    FFuntion();
+    soundF();
 });
 
 GbKey.addEventListener("click", (even) => {
     playerSequence.push(7);
     check();
-    GbFuntion();
+    soundGb();
 });
 
 GKey.addEventListener("click", (even) => {
     playerSequence.push(8);
     check();
-    GFuntion();
+    soundG();
 });
 
 AbKey.addEventListener("click", (even) => {
     playerSequence.push(9);
     check();
-    AbFuntion();
+    soundAb();
 });
 
 AKey.addEventListener("click", (even) => {
     playerSequence.push(10);
     check();
-    AFuntion();
+    soundA();
 });
 
 BbKey.addEventListener("click", (even) => {
     playerSequence.push(11);
     check();
-    BbFuntion();
+    soundBb();
 });
 
 BKey.addEventListener("click", (even) => {
     playerSequence.push(12);
     check();
-    BFuntion();
+    soundB();
 });
 
 
@@ -427,6 +430,7 @@ function check() {
     };
     
     if (playerTurn == playerSequence.length && correct && !win) {
+        console.log("it works");
         playerTurn++;
         playerSequence = [];
         compTurn = true;
@@ -440,6 +444,6 @@ function check() {
 // Win Function
 
 function winGame() {
-    alert("Well done! You've completed the game :)");
+    //alert("Well done! You've completed the game :)");
     win = true;
 };
