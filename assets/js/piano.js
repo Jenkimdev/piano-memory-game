@@ -192,7 +192,6 @@ function playGame() {
     numberKeyPressed = 0;
     intervalId = 0;
     playerTurn = 1;
-    numberKeyPressed = 0;
     score.innerHTML = 0;
 
     for (var i = 0; i < 12; i++) {
@@ -222,8 +221,8 @@ function level() {
     };
 
     if(computerTurn) {
-
-        /*setTimeout(() => {
+    console.log("test");
+        setTimeout(() => {
         switch (computerSequence[numberKeyPressed]) {
             case 1:
             soundC();
@@ -258,31 +257,12 @@ function level() {
             case 11:
             soundBb();
             break;
-            default:
+            case 12:
             soundB();
             break;
         };
+        numberKeyPressed++;
         }, 200);
-        */
-
-        setTimeout(() => {
-            if (computerSequence[numberKeyPressed] == 1) soundC();
-            if (computerSequence[numberKeyPressed] == 2) soundDb();
-            if (computerSequence[numberKeyPressed] == 3) soundD();
-            if (computerSequence[numberKeyPressed] == 4) soundEb();
-            if (computerSequence[numberKeyPressed] == 5) soundE();
-            if (computerSequence[numberKeyPressed] == 6) soundF();
-            if (computerSequence[numberKeyPressed] == 7) soundGb();
-            if (computerSequence[numberKeyPressed] == 8) soundG();
-            if (computerSequence[numberKeyPressed] == 9) soundAb();
-            if (computerSequence[numberKeyPressed] == 10) soundA();
-            if (computerSequence[numberKeyPressed] == 11) soundBb();
-            if (computerSequence[numberKeyPressed] == 12) soundB();
-            numberKeyPressed++;
-        }, 200);
-        
-        
-
     };
     
 };
@@ -291,7 +271,7 @@ function level() {
 function soundC() {
     playCKey();
     CKey.classList.add("active");
-    setTimeout(() => CKey.classList.remove("active"), 200);
+    setTimeout(() => CKey.classList.remove("active"), 300);
 };
 
 function soundDb() {
@@ -486,9 +466,8 @@ function check() {
     if (playerTurn == playerSequence.length && correct && !win) {
         playerTurn++;
         playerSequence = [];
-        compTurn = true;
+        computerTurn = true;
         numberKeyPressed = 0;
-        computerSequence = [];
         score.innerHTML = playerTurn -1;
         intervalId = setInterval(level, 800);
         correctMessage.style.display = "block";
