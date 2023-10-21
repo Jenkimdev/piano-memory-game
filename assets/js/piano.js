@@ -150,19 +150,22 @@ BKey.addEventListener("click", playBKey);
 //Memory Game Skeleton Variables
 const keys = [CKey, DbKey, DKey, EbKey, EKey, FKey, GbKey, GKey, AbKey, AKey, BbKey, BKey];
 const onButton = document.querySelector(".power");
+const score = document.querySelector(".score-count");
+const startButton = document.querySelector(".start-button");
 
-let score = document.querySelector(".score-count");
 let computerSequence = [];
 let playerSequence = [];
+let numberKeyPressed;
+let playerTurn;
 let correct;
+let computerTurn;
+let intervalId;
 let on = false;
 let win;
-let intervalId;
-let turn;
-let computerTurn;
-let numberKeyPressed;
-let correctMessage = document.getElementsByClassName("congratulations-message");
-let incorrectMessage = document.getElementsByClassName("wrong-message");
+
+//User Messages
+let correctMessage = document.querySelector(".congratulations-message");
+let incorrectMessage = document.querySelector(".wrong-message");
 
 
 //Power On Funtion
@@ -181,7 +184,7 @@ onButton.addEventListener("click", (event) => {
 
 //Play Game Funtion
 function playGame() {
-    score = 0;
+    correctMessage.hidden = true;
     computerSequence = [];
     playerSequence = [];
     correct = true;
@@ -201,9 +204,7 @@ function playGame() {
     intervalId = setInterval(level, 800);
 };
 
-//Start Button Function 
-const startButton = document.querySelector(".start-button");
-
+//Start Button Function
 startButton.addEventListener("click", (event) => {
     if (on || win) {
     playGame();
@@ -217,6 +218,7 @@ function level() {
     if (numberKeyPressed == playerTurn) {
         clearInterval(intervalId);
         computerTurn = false;
+        on = true;
     };
 
     if(computerTurn) {
@@ -464,28 +466,35 @@ function check() {
         correct = false;
     };
 
-    if (playerSequence.length == 12 && correct) {
+    if (playerSequence.length == 11 && correct) {
         winGame();
     };
 
     if (correct == false) {
-        //alert("Sorry that was wrong :( Let's start again!");
+        score.innerHTML = "-";
         setTimeout(() => {
             score.innerHTML = playerTurn;
             playGame();
-        }, 900);
-        
+        }, 800);
+
+        incorrectMessage.style.display = "block";
+        setTimeout(() => {
+            incorrectMessage.style.display = "none";
+        }, 1200);
     };
     
     if (playerTurn == playerSequence.length && correct && !win) {
-        console.log("it works");
         playerTurn++;
         playerSequence = [];
         compTurn = true;
+        numberKeyPressed = 0;
         computerSequence = [];
-        score.innerHTML = playerTurn;
+        score.innerHTML = playerTurn -1;
         intervalId = setInterval(level, 800);
-        level();
+        correctMessage.style.display = "block";
+        setTimeout(() => {
+            correctMessage.style.display = "none";
+        }, 1200);
     };
 
 };
@@ -493,6 +502,6 @@ function check() {
 // Win Function
 
 function winGame() {
-    //alert("Well done! You've completed the game :)");
+    alert("Well done! You've completed the game! Refresh, or turn the piano off and on to play all over again! :)");
     win = true;
 };
