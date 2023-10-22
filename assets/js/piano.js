@@ -1,4 +1,3 @@
-let pianoOutline = document.getElementsByClassName("piano-outline");
 //Playable Piano Section
 //Audio Variables
 
@@ -148,7 +147,6 @@ BKey.addEventListener("click", playBKey);
 
 //Memory Game Section
 //Memory Game Skeleton Variables
-const keys = [CKey, DbKey, DKey, EbKey, EKey, FKey, GbKey, GKey, AbKey, AKey, BbKey, BKey];
 const onButton = document.querySelector(".power");
 const score = document.querySelector(".score-count");
 const startButton = document.querySelector(".start-button");
@@ -195,7 +193,7 @@ function playGame() {
     score.innerHTML = 0;
 
     for (var i = 0; i < 12; i++) {
-        computerSequence.push(Math.floor(Math.random() * 12) + 1)
+        computerSequence.push(Math.floor(Math.random() * 12) + 1);
     };
 
     computerTurn = true;
@@ -457,7 +455,7 @@ function check() {
             playGame();
         }, 800);
 
-        score.innerHTML = "Bad"
+        score.innerHTML = "Bad";
 
         setTimeout(() => {
             score.innerHTML = playerTurn -1;
@@ -492,7 +490,7 @@ function check() {
 // Win Function
 
 function winGame() {
-    score.innerHTML = "Win!"
+    score.innerHTML = "Win!";
     alert("Well done! You've completed the game! Refresh, or turn the piano off and on to play all over again! :)");
     win = true;
 };
