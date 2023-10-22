@@ -88,7 +88,12 @@ Keyboard: This is the users point of input and interaction and allows the user t
 
 | **Test** | **Result** |
 | --- | --- |
-| I used the W3C Markup Validator, W3C CCS Validator and JSHint Services to validate the project to ensure there were no syntax errors in the project. | Results Markup Validator: all pages pass through the validator without errors and warnings.
+| I used the W3C Markup Validator, W3C CCS Validator and JSHint Services to validate the project to ensure there were no syntax errors in the project. | Results Markup Validator: all pages pass through the validator without errors. There were some warnings regarding some semicolons that were not needed from JSHint, but I resolved these and retested the project with JSHint with no concerns.
+
+**Validation Snippets**
+![](assets/images/html-validation.png)
+![](assets/images/css-validation.png)
+![](assets/images/js-validation.png)
 
 
 **Testing the User Stories from User Experience (UX) section**:
