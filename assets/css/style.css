@@ -141,6 +141,14 @@ header {
     font-size: 1.5rem;
 }
 
+.win-message {
+    background-color: rgba(0, 0, 0, .6);
+    margin-top: 20px;
+    display: none;
+    color: darkgreen;
+    font-size: 1.5rem;
+}
+
 .wrong-message {
     background-color: rgba(0, 0, 0, .6);
     margin-top: 20px;

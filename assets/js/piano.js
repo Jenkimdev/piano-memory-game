@@ -164,6 +164,7 @@ let win;
 //User Messages
 let correctMessage = document.querySelector(".congratulations-message");
 let incorrectMessage = document.querySelector(".wrong-message");
+let winner = document.querySelector(".win-message");
 
 
 //Power On Funtion
@@ -478,7 +479,8 @@ function check() {
             score.style.color = "red";
             score.innerHTML = playerTurn -1;
         }, 600);
-        intervalId = setInterval(level, 800);
+        winGame();
+        //intervalId = setInterval(level, 800);
         correctMessage.style.display = "block";
         setTimeout(() => {
             correctMessage.style.display = "none";
@@ -493,8 +495,14 @@ function winGame() {
     score.style.color = "green";
     score.innerHTML = "Win!";
     win = true;
+    winner.style.display = "block";
+
     setTimeout(() => {
         score.style.color = "red";
-        playGame();
-    }, 1000)
+    }, 1000);
+
+    setTimeout(() => {
+         winner.style.display = "none";
+         playGame();
+    }, 6000);
 }
