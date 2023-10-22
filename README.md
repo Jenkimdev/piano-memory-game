@@ -60,7 +60,7 @@ Start Button: This provides the user the ability to start a game if game mode is
 
 ![](assets/images/correct-messages.png)
 
-Correct Messages: These provide feedback to the users, so that they know when they have repeated the sequence correctly. They can be found below the piano and within the score screen. These are green in colour, as red is associated with being correct.
+Correct Messages: These provide feedback to the users, so that they know when they have repeated the sequence correctly. They can be found below the piano and within the score screen. These are green in colour, as green is associated with being correct.
 
 ![](assets/images/incorrect-message.png)
 
@@ -104,7 +104,7 @@ Keyboard: This is the users point of input and interaction and allows the user t
 
 **Returning users**
 
-- As a returning user, I will need to remember how to interact with this game, in order to perhaps win the game or beat my score. - As a returning user, it is easy to remember how to interact with the game and it it is certainly acheivable to win the game, as will as to beat your score. 
+- As a returning user, I will need to remember how to interact with this game, in order to perhaps win the game or beat my score. - As a returning user, it is easy to remember how to interact with the game and it it is certainly acheivable to win the game, as well as to beat your score. 
 - As a returning user, I may also want to kill time, by using the free play option. - As a returning user, it is made very easy for me to kill time using the free play mode of the game and I can easily test my memory by switching to game mode for further stimulation.
 
 **Frequent users**
