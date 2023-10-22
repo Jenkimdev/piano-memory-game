@@ -457,6 +457,12 @@ function check() {
             playGame();
         }, 800);
 
+        score.innerHTML = "Wrong"
+
+        setTimeout(() => {
+            score.innerHTML = playerTurn -1;
+        }, 600);
+
         incorrectMessage.style.display = "block";
         setTimeout(() => {
             incorrectMessage.style.display = "none";
@@ -468,7 +474,12 @@ function check() {
         playerSequence = [];
         computerTurn = true;
         numberKeyPressed = 0;
-        score.innerHTML = playerTurn -1;
+        score.innerHTML = "Good";
+        score.style.color = "green";
+        setTimeout(() => {
+            score.style.color = "red";
+            score.innerHTML = playerTurn -1;
+        }, 600);
         intervalId = setInterval(level, 800);
         correctMessage.style.display = "block";
         setTimeout(() => {
@@ -481,6 +492,7 @@ function check() {
 // Win Function
 
 function winGame() {
+    score.innerHTML = "Win!"
     alert("Well done! You've completed the game! Refresh, or turn the piano off and on to play all over again! :)");
     win = true;
 };
