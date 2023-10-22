@@ -490,7 +490,11 @@ function check() {
 // Win Function
 
 function winGame() {
+    score.style.color = "green";
     score.innerHTML = "Win!";
-    alert("Well done! You've completed the game! Refresh, or turn the piano off and on to play all over again! :)");
     win = true;
+    setTimeout(() => {
+        score.style.color = "red";
+        playGame();
+    }, 1000)
 }
