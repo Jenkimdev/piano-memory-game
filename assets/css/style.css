@@ -122,12 +122,14 @@ header {
 /* Correct and Wrong messages styling */
 
 .congratulations-message {
+    margin-top: 30px;
     display: none;
     color: darkgreen;
     font-size: 1.5rem;
 }
 
 .wrong-message {
+    margin-top: 20px;
     display: none;
     color: rgb(161, 33, 33);
     font-size: 1.5rem;
