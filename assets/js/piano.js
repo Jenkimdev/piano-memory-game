@@ -176,8 +176,8 @@ onButton.addEventListener("click", (event) => {
         on = false;
         score.innerHTML = "Free";
         clearInterval(intervalId);
-    };
-})
+    }
+});
 
 
 //Play Game Funtion
