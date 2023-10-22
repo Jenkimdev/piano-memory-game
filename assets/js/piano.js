@@ -172,11 +172,11 @@ let incorrectMessage = document.querySelector(".wrong-message");
 onButton.addEventListener("click", (event) => {
     if (onButton.checked == true) {
         on = true;
-        score.innerHTML = "-";
+        score.innerHTML = "Game";
     }
     else {
         on = false;
-        score.innerHTML = "";
+        score.innerHTML = "Free";
         clearInterval(intervalId);
     };
 });

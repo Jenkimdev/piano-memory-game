@@ -96,14 +96,15 @@ header {
 }
 
 .score {
-    top;
+    font-size: larger;
     position: relative;
     margin: 10px;
 }
 
 .score-count {
-    background-color: ;
-    margin-left: 18px;
+    background-color: black;
+    width: 48px;
+    color: rgb(170, 1, 1);
 }
 
 .start-button {
