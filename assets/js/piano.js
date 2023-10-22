@@ -457,7 +457,7 @@ function check() {
             playGame();
         }, 800);
 
-        score.innerHTML = "Wrong"
+        score.innerHTML = "Bad"
 
         setTimeout(() => {
             score.innerHTML = playerTurn -1;
