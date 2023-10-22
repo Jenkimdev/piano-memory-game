@@ -10,7 +10,7 @@ The last update to this file was:  22/10/2023
 
 **Live Website**
 
-A live version of the project can be viewed here: 
+A live version of the project can be viewed here: https://jenkimdev.github.io/piano-memory-game/
 
 **User Experience (UX)**
 
@@ -82,7 +82,6 @@ Keyboard: This is the users point of input and interaction and allows the user t
 
 - Git: I used Git for the version control of my code.
 - GitHub: I used GitHub for managing my repositories.
-- Bootstrap5: I used Bootstrap5 to arrange certain elements of the site.
 
 **Testing**
 
@@ -91,7 +90,7 @@ Keyboard: This is the users point of input and interaction and allows the user t
 | I used the W3C Markup Validator, W3C CCS Validator and JSHint Services to validate the project to ensure there were no syntax errors in the project. | Results Markup Validator: all pages pass through the validator without errors. There were some warnings regarding some semicolons that were not needed from JSHint, but I resolved these and retested the project with JSHint with no concerns.
 
 **Validation Snippets**
-![](assets/images/html-validation.png)
+![](assets/images/html-validator.png)
 ![](assets/images/css-validation.png)
 ![](assets/images/js-validation.png)
 
