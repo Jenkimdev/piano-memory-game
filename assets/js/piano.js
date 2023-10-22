@@ -177,7 +177,7 @@ onButton.addEventListener("click", (event) => {
         score.innerHTML = "Free";
         clearInterval(intervalId);
     };
-});
+})
 
 
 //Play Game Funtion
@@ -194,18 +194,18 @@ function playGame() {
 
     for (var i = 0; i < 12; i++) {
         computerSequence.push(Math.floor(Math.random() * 12) + 1);
-    };
+    }
 
     computerTurn = true;
 
     intervalId = setInterval(level, 800);
-};
+}
 
 //Start Button Function
 startButton.addEventListener("click", (event) => {
     if (on || win) {
     playGame();
-    };
+    }
 });
 
 //Level Function
@@ -216,7 +216,7 @@ function level() {
         clearInterval(intervalId);
         computerTurn = false;
         on = true;
-    };
+    }
 
     if(computerTurn) {
     console.log("test");
@@ -258,85 +258,85 @@ function level() {
             case 12:
             soundB();
             break;
-        };
+        }
         numberKeyPressed++;
         }, 200);
-    };
+    }
     
-};
+}
 
 //Key Functions for Computer Turn
 function soundC() {
     playCKey();
     CKey.classList.add("active");
     setTimeout(() => CKey.classList.remove("active"), 300);
-};
+}
 
 function soundDb() {
     playDbKey();
     DbKey.classList.add("active");
     setTimeout(() => DbKey.classList.remove("active"), 200);
-};
+}
 
 function soundD() {
     playDKey();
     DKey.classList.add("active");
     setTimeout(() => DKey.classList.remove("active"), 200);
-};
+}
 
 function soundEb() {
     playEbKey();
     EbKey.classList.add("active");
     setTimeout(() => EbKey.classList.remove("active"), 200);
-};
+}
 
 function soundE() {
     playEKey();
     EKey.classList.add("active");
     setTimeout(() => EKey.classList.remove("active"), 200);
-};
+}
 
 function soundF() {
     playFKey();
     FKey.classList.add("active");
     setTimeout(() => FKey.classList.remove("active"), 200);
-};
+}
 
 function soundGb() {
     playGbKey();
     GbKey.classList.add("active");
     setTimeout(() => GbKey.classList.remove("active"), 200);
-};
+}
 
 function soundG() {
     playGKey();
     GKey.classList.add("active");
     setTimeout(() => GKey.classList.remove("active"), 200);
-};
+}
 
 function soundAb() {
     playAbKey();
     AbKey.classList.add("active");
     setTimeout(() => AbKey.classList.remove("active"), 200);
-};
+}
 
 function soundA() {
     playAKey();
     AKey.classList.add("active");
     setTimeout(() => AKey.classList.remove("active"), 200);
-};
+}
 
 function soundBb() {
     playBbKey();
     BbKey.classList.add("active");
     setTimeout(() => BbKey.classList.remove("active"), 200);
-};
+}
 
 function soundB() {
     playBKey();
     BKey.classList.add("active");
     setTimeout(() => BKey.classList.remove("active"), 200);
-};
+}
 
 //Key Functions for Player Turn
 
@@ -345,7 +345,7 @@ CKey.addEventListener("click", (event) => {
         playerSequence.push(1);
         check();
         soundC();
-    };
+    }
 });
 
 DbKey.addEventListener("click", (event) => {
@@ -353,7 +353,7 @@ DbKey.addEventListener("click", (event) => {
         playerSequence.push(2);
         check();
         soundDb();
-    };
+    }
 });
 
 DKey.addEventListener("click", (event) => {
@@ -361,7 +361,7 @@ DKey.addEventListener("click", (event) => {
         playerSequence.push(3);
         check();
         soundD();
-    };
+    }
 });
 
 EbKey.addEventListener("click", (event) => {
@@ -369,7 +369,7 @@ EbKey.addEventListener("click", (event) => {
         playerSequence.push(4);
         check();
         soundEb();
-    };
+    }
 });
 
 EKey.addEventListener("click", (event) => {
@@ -377,7 +377,7 @@ EKey.addEventListener("click", (event) => {
         playerSequence.push(5);
         check();
         soundE();
-    };
+    }
 });
 
 FKey.addEventListener("click", (event) => {
@@ -385,7 +385,7 @@ FKey.addEventListener("click", (event) => {
         playerSequence.push(6);
         check();
         soundF();
-    };
+    }
 });
 
 GbKey.addEventListener("click", (event) => {
@@ -393,7 +393,7 @@ GbKey.addEventListener("click", (event) => {
         playerSequence.push(7);
         check();
         soundGb();
-    };
+    }
 });
 
 GKey.addEventListener("click", (event) => {
@@ -401,7 +401,7 @@ GKey.addEventListener("click", (event) => {
         playerSequence.push(8);
         check();
         soundG();
-    };
+    }
 });
 
 AbKey.addEventListener("click", (event) => {
@@ -409,7 +409,7 @@ AbKey.addEventListener("click", (event) => {
         playerSequence.push(9);
         check();
         soundAb();
-    };
+    }
 });
 
 AKey.addEventListener("click", (event) => {
@@ -417,7 +417,7 @@ AKey.addEventListener("click", (event) => {
         playerSequence.push(10);
         check();
         soundA();
-    };
+    }
 });
 
 BbKey.addEventListener("click", (event) => {
@@ -425,7 +425,7 @@ BbKey.addEventListener("click", (event) => {
         playerSequence.push(11);
         check();
         soundBb();
-    };
+    }
 });
 
 BKey.addEventListener("click", (event) => {
@@ -433,7 +433,7 @@ BKey.addEventListener("click", (event) => {
         playerSequence.push(12);
         check();
         soundB();
-    };
+    }
 });
 
 
@@ -442,11 +442,11 @@ BKey.addEventListener("click", (event) => {
 function check() {
     if (playerSequence[playerSequence.length - 1] !== computerSequence[playerSequence.length -1]) {
         correct = false;
-    };
+    }
 
     if (playerSequence.length == 11 && correct) {
         winGame();
-    };
+    }
 
     if (correct == false) {
         score.innerHTML = "-";
@@ -465,7 +465,7 @@ function check() {
         setTimeout(() => {
             incorrectMessage.style.display = "none";
         }, 1200);
-    };
+    }
     
     if (playerTurn == playerSequence.length && correct && !win) {
         playerTurn++;
@@ -483,9 +483,9 @@ function check() {
         setTimeout(() => {
             correctMessage.style.display = "none";
         }, 1200);
-    };
+    }
 
-};
+}
 
 // Win Function
 
@@ -493,4 +493,4 @@ function winGame() {
     score.innerHTML = "Win!";
     alert("Well done! You've completed the game! Refresh, or turn the piano off and on to play all over again! :)");
     win = true;
-};
+}
