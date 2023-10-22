@@ -479,8 +479,7 @@ function check() {
             score.style.color = "red";
             score.innerHTML = playerTurn -1;
         }, 600);
-        winGame();
-        //intervalId = setInterval(level, 800);
+        intervalId = setInterval(level, 800);
         correctMessage.style.display = "block";
         setTimeout(() => {
             correctMessage.style.display = "none";
