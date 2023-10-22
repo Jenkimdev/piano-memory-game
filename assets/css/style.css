@@ -3,7 +3,8 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(113, 116, 119);
+    background-image: url("/assets/images/background.jpg");
+    background-color: black;
     justify-content: center;
     align-items: center;
 }
@@ -15,6 +16,7 @@ li {
 }
 
 .welcome-message {
+    color: rgb(255, 255, 255);
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
@@ -25,6 +27,7 @@ li {
 }
 
 h1 {
+    color: white;
     margin-bottom: 30px;
     text-align: center;
     width: 100%;
