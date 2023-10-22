@@ -30,10 +30,10 @@ h1 {
 .switch {
     position: relative;
     top: 45px;
-    left: 90%;
+    left: 10px;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 48px;
+    height: 22px;
 }
 
 .switch input {
@@ -58,8 +58,8 @@ h1 {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 14px;
+    width: 14px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -109,9 +109,8 @@ header {
 
 .start-button {
     position: relative;
-    top: 50px;
-    left: 745%;
-    margin: 10px;
+    top: 90px;
+    margin: 8px;
 }
 
 /* Correct and Wrong messages styling */
