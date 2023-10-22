@@ -116,6 +116,9 @@ header {
 }
 
 .score-count {
+    margin-top: 148px;
+    height: 20px;
+    margin-left: -309px;
     background-color: rgb(66, 16, 16);
     width: 48px;
     color: red;
@@ -170,8 +173,7 @@ h3 {
 /* Piano Key Styles */
 
 .keys {
-    margin-top: -154px;
-    margin-left: 38px;
+    margin-left: 60px;
     display: flex;
     position: absolute;
     justify-content: flex-end;
